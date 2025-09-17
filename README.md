@@ -10,4 +10,4 @@ SoftUni JS Back End Course And Projects
  - [x] Add Handlebars
  - [x] Setup Handlebars
  - [x] Add resources
- - [] Add css
+ - [x] Render Homepage
