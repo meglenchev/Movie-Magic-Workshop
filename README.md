@@ -5,6 +5,9 @@ SoftUni JS Back End Course And Projects
  - [x] Initialize NodeJS Project
  - [x] Dev script
  - [x] Debugging
- - [] Add basic http server
- - [] Add resources
+ - [x] Add ExpressJS server
+ - [x] Setup ExpressJS server
+ - [x] Add Handlebars
+ - [x] Setup Handlebars
+ - [x] Add resources
  - [] Add css
