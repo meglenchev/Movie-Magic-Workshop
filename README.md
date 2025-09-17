@@ -11,3 +11,4 @@ SoftUni JS Back End Course And Projects
  - [x] Setup Handlebars
  - [x] Add resources
  - [x] Render Homepage
+ - [x] Setup Static Files

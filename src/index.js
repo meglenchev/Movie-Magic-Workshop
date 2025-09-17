@@ -12,6 +12,9 @@ app.engine('hbs', handlebars.engine({
 app.set('view engine', 'hbs');
 app.set('views', 'src/views');
 
+// Setup Static Middleware
+app.use(express.static('src/public'))
+
 // Routs
 app.get('/', (req, res) => {
     res.render('home', { layout: false})
