@@ -17,7 +17,7 @@ app.use(express.static('src/public'))
 
 // Routs
 app.get('/', (req, res) => {
-    res.render('home', { layout: false})
+    res.render('home')
 })
 
 // Start Server

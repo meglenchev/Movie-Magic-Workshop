@@ -12,3 +12,4 @@ SoftUni JS Back End Course And Projects
  - [x] Add resources
  - [x] Render Homepage
  - [x] Setup Static Files
+ - [x] Add Layout
