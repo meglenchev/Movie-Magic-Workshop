@@ -5,4 +5,4 @@ import { movieControler } from './controllers/movieControllers.js';
 export const routes = Router();
 
 routes.use(homeController);
-routes.use(movieControler);
+routes.use('/movies', movieControler);

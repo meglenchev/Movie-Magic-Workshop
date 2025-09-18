@@ -1,6 +1,6 @@
-import express from 'express';
-import handlebars from 'express-handlebars';
-import { routes } from './routes.js';
+import express from 'express'; // npm install express 
+import handlebars from 'express-handlebars'; // npm install express-handlebars
+import { routes } from './routes.js'; // Global Routs controller, you are responsible for all routes
 
 // Setup Express Server
 const app = express();
@@ -10,13 +10,13 @@ app.engine('hbs', handlebars.engine({
     extname: 'hbs', // We specify what the template extension should be.
 }));
 app.set('view engine', 'hbs');
-app.set('views', 'src/views');
+app.set('views', 'src/views'); // We indicate where the folder with the templates is located
 
 // Setup Static Middleware
 app.use(express.static('src/public')) // Specify the location of static files for the project
 
 // Routs
-app.use(routes); // Global controller, you are responsible for all routes
+app.use(routes); // Calling The Global Routs controller
 
 // Start Server
 app.listen(5000, () => console.log('Server is listening on http://localehost:5000...'))
