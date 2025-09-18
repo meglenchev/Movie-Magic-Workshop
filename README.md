@@ -15,6 +15,7 @@ SoftUni JS Back End Course And Projects
  - [x] Add Layout
  - [x] Add Routes
  - [x] Add 404
+ - [x] Add Dynamic Page Title
  - [x] Add Home Controllers
  - [x] Add Movie Controllers
  - [x] Ready Body Data
