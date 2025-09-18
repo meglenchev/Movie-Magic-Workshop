@@ -13,3 +13,5 @@ SoftUni JS Back End Course And Projects
  - [x] Render Homepage
  - [x] Setup Static Files
  - [x] Add Layout
+ - [x] Add Routes
+ - [x] Add Home Controllers
