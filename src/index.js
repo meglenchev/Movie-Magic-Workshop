@@ -13,7 +13,10 @@ app.set('view engine', 'hbs');
 app.set('views', 'src/views'); // We indicate where the folder with the templates is located
 
 // Setup Static Middleware
-app.use(express.static('src/public')) // Specify the location of static files for the project
+app.use(express.static('src/public')); // Specify the location of static files for the project
+
+// Middleware that will Parse Form Data from request
+app.use(express.urlencoded());
 
 // Routs
 app.use(routes); // Calling The Global Routs controller
