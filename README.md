@@ -34,3 +34,6 @@ SoftUni JS Back End Course And Projects
      - [x] Add model method for create movie
 - [x] Redirect After Creation
 - [x] Add Unique ID For Each Created Movie
+
+### Details Page
+- [x] Add Navigation Button For Details
