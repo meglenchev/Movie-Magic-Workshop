@@ -8,14 +8,14 @@ movieControler.get('/create', (req, res) => {
 });
 
 movieControler.post('/create', async (req, res) => {
-    const movieData = req.body;
+    const movieData = req.body; // req.body - Returns a parsed object with the form data
     await movieServices.create(movieData);
     
     res.redirect('/');
 });
 // Details Page
 movieControler.get('/:movieId/details', (req, res) => {
-    const movieId = req.params.movieId;
+    const movieId = req.params.movieId; // req.params.movieId Returns the parameter from the URL address
     const movie = movieServices.getOne(movieId);
 
     const rating = '&#x2605;'.repeat(Number(movie.rating));
@@ -25,5 +25,7 @@ movieControler.get('/:movieId/details', (req, res) => {
 // Search Page
 movieControler.get('/search', (req, res) => {
     const movies = movieServices.getAll();
+    const serachData = req.query; // req.query - Returns an object with the data from the search fields
+
     res.render('search', { movies, pageTitle: 'Search Movie' });
 });

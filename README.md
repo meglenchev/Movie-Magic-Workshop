@@ -46,3 +46,4 @@ SoftUni JS Back End Course And Projects
 ### Search
 - [x] Show Static Search Page
 - [x] Render All Movies
+- [x] Modify Search Form
