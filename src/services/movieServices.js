@@ -2,8 +2,8 @@ import { Movie } from "../models/Movie.js";
 
 export default {
     // Return All Movies In Home Page
-    getAll() {
-        return Movie.find();
+    getAll(filter) {
+        return Movie.find(filter);
     },
     // Return One Move - Details
     getOne(movieId) {

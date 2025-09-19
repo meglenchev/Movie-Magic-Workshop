@@ -24,8 +24,9 @@ movieControler.get('/:movieId/details', (req, res) => {
 });
 // Search Page
 movieControler.get('/search', (req, res) => {
-    const movies = movieServices.getAll();
-    const serachData = req.query; // req.query - Returns an object with the data from the search fields
+    const filter = req.query; // req.query - Returns an object with the data from the search fields
+
+    const movies = movieServices.getAll(filter);
 
     res.render('search', { movies, pageTitle: 'Search Movie' });
 });

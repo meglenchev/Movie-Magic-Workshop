@@ -18,6 +18,18 @@ export class Movie {
             result = dataMovies.movies.filter(movie => movie._id === filter._id);
         }
 
+        if (filter.title) {
+            result = dataMovies.movies.filter(movie => movie.title.toLowerCase() === filter.title.toLowerCase());
+        }
+
+        if (filter.genre) {
+            result = dataMovies.movies.filter(movie => movie.genre.toLowerCase() === filter.genre.toLowerCase());
+        }
+
+        if (filter.year) {
+            result = dataMovies.movies.filter(movie => movie.year === filter.year);
+        }
+
         return result;
     }
 
