@@ -11,8 +11,24 @@ export class Movie {
     }
 
     // We are returning a new instance of all movies
-    static find() {
-        return dataMovies.movies.slice();
+    static find(filter = {}) {
+        let result = dataMovies.movies.slice();
+
+        if (filter._id) {
+            result = dataMovies.movies.filter(movie => movie._id === filter._id);
+        }
+
+        return result;
+    }
+
+    static findOne(filter = {}) {
+        let result = dataMovies.movies[0];
+
+        if (filter._id) {
+            result = dataMovies.movies.find(movie => movie._id === filter._id);
+        }
+
+        return result;
     }
 
     get id() {
