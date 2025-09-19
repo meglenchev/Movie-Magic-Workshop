@@ -20,4 +20,6 @@ SoftUni JS Back End Course And Projects
  - [x] Add Movie Controllers
  - [x] Ready Body Data
  - [x] Add Movie Data Layer
- - [] Add Movie Service
+ - [x] Add Movie Service
+ - [x] Render Movies On Home Page
+ - [x] Show No Movies Screen

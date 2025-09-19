@@ -6,9 +6,7 @@ export const homeController = Router();
 homeController.get('/', (req, res) => {
     const movies = movieServices.getAll();
 
-    console.log(movies);
-
-    res.render('home');
+    res.render('home', { movies });
 });
 
 homeController.get('/about', (req, res) => {
