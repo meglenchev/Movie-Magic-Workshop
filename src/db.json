@@ -49,20 +49,11 @@
       "category": "tv-show",
       "genre": "Historical Drama",
       "director": "Meglenchev",
-      "year": "2025",
-      "imageUrl": "https://muzikercdn.com/uploads/products/2677/267799/thumb_large_d_gallery_base_87cf9c4b.jpg",
-      "rating": "6",
-      "description": "sdsdsdsa"
-    },
-    {
-      "title": "New Movie Test",
-      "category": "tv-show",
-      "genre": "Historical",
-      "director": "Tsvetan",
       "year": "2020",
       "imageUrl": "https://muzikercdn.com/uploads/products/2677/267799/thumb_large_d_gallery_base_87cf9c4b.jpg",
-      "rating": "3",
-      "description": "sdasdasdasdsa"
+      "rating": "6",
+      "description": "sdasdasd",
+      "_id": "0ab52666-8f0a-4c32-ab5f-e8829ace6f40"
     }
   ]
 }
