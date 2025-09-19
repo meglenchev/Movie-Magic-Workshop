@@ -1,7 +1,7 @@
 # Cat-Shelter-Workshop
 SoftUni JS Back End Course And Projects
 
-## TODOs
+### TODOs
  - [x] Initialize NodeJS Project
  - [x] Dev script
  - [x] Debugging
@@ -13,13 +13,21 @@ SoftUni JS Back End Course And Projects
  - [x] Render Homepage
  - [x] Setup Static Files
  - [x] Add Layout
- - [x] Add Routes
  - [x] Add 404
  - [x] Add Dynamic Page Title
+
+ ### Architecture
  - [x] Add Home Controllers
- - [x] Add Movie Controllers
- - [x] Ready Body Data
  - [x] Add Movie Data Layer
  - [x] Add Movie Service
  - [x] Render Movies On Home Page
  - [x] Show No Movies Screen
+
+### Create Movie
+ - [x] Add Movie Controllers
+ - [x] Show Create Movie Page
+ - [x] Add Routes
+ - [x] Ready Body Data
+ - [] Create Movie
+     - [x] Add action
+     - [x] Add services
