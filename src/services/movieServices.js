@@ -6,6 +6,8 @@ export default {
     }, 
 
     create(movieData) {
+        const movie = new Movie(movieData);
         
+        return movie.save();
     }
 }

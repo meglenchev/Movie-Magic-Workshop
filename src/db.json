@@ -43,6 +43,26 @@
       "rating": 6.4,
       "description": "An investigative journalist and self-proclaimed atheist sets out to disprove the existence of God after his wife becomes a Christian.",
       "_id": "8555329f-0735-4956-9176-7ffb388c2443"
+    },
+    {
+      "title": "Test Movie",
+      "category": "tv-show",
+      "genre": "Historical Drama",
+      "director": "Meglenchev",
+      "year": "2025",
+      "imageUrl": "https://muzikercdn.com/uploads/products/2677/267799/thumb_large_d_gallery_base_87cf9c4b.jpg",
+      "rating": "6",
+      "description": "sdsdsdsa"
+    },
+    {
+      "title": "New Movie Test",
+      "category": "tv-show",
+      "genre": "Historical",
+      "director": "Tsvetan",
+      "year": "2020",
+      "imageUrl": "https://muzikercdn.com/uploads/products/2677/267799/thumb_large_d_gallery_base_87cf9c4b.jpg",
+      "rating": "3",
+      "description": "sdasdasdasdsa"
     }
   ]
 }
