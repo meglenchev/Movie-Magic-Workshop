@@ -19,3 +19,5 @@ SoftUni JS Back End Course And Projects
  - [x] Add Home Controllers
  - [x] Add Movie Controllers
  - [x] Ready Body Data
+ - [x] Add Movie Data Layer
+ - [] Add Movie Service
