@@ -19,7 +19,7 @@ export class Movie {
         }
 
         if (filter.title) {
-            result = dataMovies.movies.filter(movie => movie.title.toLowerCase() === filter.title.toLowerCase());
+            result = dataMovies.movies.filter(movie => movie.title.toLowerCase().includes(filter.title.toLowerCase()));
         }
 
         if (filter.genre) {
