@@ -13,3 +13,8 @@ movieControler.post('/create', async (req, res) => {
     
     res.redirect('/');
 });
+
+movieControler.get('/:movieId/details', (req, res) => {
+    const movieId = req.params.movieId;
+    console.log(movieId);
+});
