@@ -41,3 +41,4 @@ SoftUni JS Back End Course And Projects
 - [x] Get Movie From Service
 - [x] Finde Movie By Id From Model
 - [x] Render Details Page
+- [x] Render Movie Rating

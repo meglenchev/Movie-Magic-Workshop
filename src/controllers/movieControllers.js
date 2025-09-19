@@ -17,5 +17,8 @@ movieControler.post('/create', async (req, res) => {
 movieControler.get('/:movieId/details', (req, res) => {
     const movieId = req.params.movieId;
     const movie = movieServices.getOne(movieId);
-    res.render('details', {movie});
+
+    const rating = '&#x2605;'.repeat(Number(movie.rating));
+
+    res.render('details', {movie, rating, pageTitle: movie.title});
 });
