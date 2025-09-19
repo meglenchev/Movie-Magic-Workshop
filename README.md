@@ -48,3 +48,4 @@ SoftUni JS Back End Course And Projects
 - [x] Render All Movies
 - [x] Modify Search Form
 - [x] Filter Movies By Search Data
+- [x] Remember Filter Data
