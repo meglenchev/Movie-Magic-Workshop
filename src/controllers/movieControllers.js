@@ -4,7 +4,7 @@ import movieServices from "../services/movieServices.js";
 export const movieControler = Router();
 // Create Page
 movieControler.get('/create', (req, res) => {
-    res.render('create', {pageTitle: 'Create movie'});
+    res.render('create', {pageTitle: 'Create Movie'});
 });
 
 movieControler.post('/create', async (req, res) => {
@@ -20,9 +20,10 @@ movieControler.get('/:movieId/details', (req, res) => {
 
     const rating = '&#x2605;'.repeat(Number(movie.rating));
 
-    res.render('details', {movie, rating, pageTitle: movie.title});
+    res.render('details', { movie, rating, pageTitle: movie.title });
 });
 // Search Page
 movieControler.get('/search', (req, res) => {
-    res.render('search');
+    const movies = movieServices.getAll();
+    res.render('search', { movies, pageTitle: 'Search Movie' });
 });
