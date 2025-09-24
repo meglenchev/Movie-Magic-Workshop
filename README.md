@@ -49,3 +49,12 @@ SoftUni JS Back End Course And Projects
 - [x] Modify Search Form
 - [x] Filter Movies By Search Data
 - [x] Remember Filter Data
+
+### Add MongoDB Database
+- [x] Install MongoDB `npm install mongoose`
+- [x] Connect To DB
+
+### Refactor Movies To Use Mongoose
+- [] Add Movie Model 
+
+- [] Add New resources

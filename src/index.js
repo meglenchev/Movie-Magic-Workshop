@@ -1,9 +1,24 @@
 import express from 'express'; // npm install express 
 import handlebars from 'express-handlebars'; // npm install express-handlebars
+import mongoose from 'mongoose';
+
 import { routes } from './routes.js'; // Global Routs controller, you are responsible for all routes
 
 // Setup Express Server
 const app = express();
+
+// Setup Database
+const url = 'mongodb://localhost:27017';
+
+try {
+    await mongoose.connect(url, {
+        dbName: 'movie-magic',
+    });
+
+    console.log('Successfully conntected to MDB')
+} catch(err) {
+    console.log(`Cannot connect to DB ${err.message}`);
+}
 
 // Setup Handlebars
 app.engine('hbs', handlebars.engine({
