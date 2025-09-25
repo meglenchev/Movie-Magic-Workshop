@@ -3,7 +3,7 @@ import { Movie } from "../models/Movie.js";
 export default {
     // Return All Movies In Home Page
     getAll(filter) {
-        return Movie.find(filter);
+        return Movie.find();
     },
     // Return One Move - Details
     getOne(movieId) {

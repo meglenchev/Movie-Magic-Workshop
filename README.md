@@ -55,6 +55,27 @@ SoftUni JS Back End Course And Projects
 - [x] Connect To DB
 
 ### Refactor Movies To Use Mongoose
-- [] Add Movie Model 
+- [x] Add Movie Model 
+    - [x] Create Movie Schema
+    - [x] Create Movie Model 
+- [] Import File Movie To DB
+- [] General Fix For Own Property Problem
+- [] Refactor Details
+- [] Refactor Create
+- [] Refactor Search
 
-- [] Add New resources
+### Add Cast
+- [] Add New Resources
+- [] Create Cast Controler
+- [] Create Cast Page
+- [] Add Cast Model
+- [] Create Cast Service
+- [] Create Cast Functionality
+
+### Attach Cast To Movie (relations)
+- [] Add Attach Cast Button
+- [] Add Attach Cast Page
+- [] Add Dynamic Data To Cast Page
+- [] Show Cast List In Attach Select
+- [] Add Relation Betwen Cast And Movie
+- [] Attach Cast Functionallity
