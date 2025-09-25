@@ -14,9 +14,9 @@ movieControler.post('/create', async (req, res) => {
     res.redirect('/');
 });
 // Details Page
-movieControler.get('/:movieId/details', (req, res) => {
+movieControler.get('/:movieId/details', async (req, res) => {
     const movieId = req.params.movieId; // req.params.movieId Returns the parameter from the URL address
-    const movie = movieServices.getOne(movieId);
+    const movie = await movieServices.getOne(movieId);
 
     const rating = '&#x2605;'.repeat(Number(movie.rating));
 
