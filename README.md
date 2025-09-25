@@ -60,8 +60,8 @@ SoftUni JS Back End Course And Projects
     - [x] Create Movie Model 
 - [x] Import File Movie To DB
 - [x] General Fix For Own Property Problem
-- [] Refactor Details
-- [] Refactor Create
+- [x] Refactor Details
+- [x] Refactor Create
 - [] Refactor Search
 
 ### Add Cast

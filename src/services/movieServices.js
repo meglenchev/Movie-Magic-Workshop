@@ -11,8 +11,9 @@ export default {
     },
     // Create Movie
     create(movieData) {
-        const movie = new Movie(movieData);
+        // const movie = new Movie(movieData);
         
-        return movie.save();
+        // return movie.save();
+        return Movie.create(movieData); // Use Mongoose Method
     }
 }
