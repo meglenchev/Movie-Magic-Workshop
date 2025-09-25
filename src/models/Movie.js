@@ -1,4 +1,4 @@
-import mongoose, { Schema, model } from "mongoose";
+import { Schema, model } from "mongoose";
 
 const movieSchema = new Schema({
     title: String,
@@ -11,4 +11,4 @@ const movieSchema = new Schema({
     description: String
 });
 
-export const Movie = mongoose.model('Movie', movieSchema, 'movies');
+export const Movie = model('Movie', movieSchema, 'movies');
