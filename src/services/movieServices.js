@@ -2,7 +2,7 @@ import { Movie } from "../models/Movie.js";
 
 export default {
     // Return All Movies In Home Page
-    getAll(filter) {
+    getAll(filter = {}) {
         let query =  Movie.find();
 
         if (filter.title) {
