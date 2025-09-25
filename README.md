@@ -62,7 +62,7 @@ SoftUni JS Back End Course And Projects
 - [x] General Fix For Own Property Problem
 - [x] Refactor Details
 - [x] Refactor Create
-- [] Refactor Search
+- [x] Refactor Search
 
 ### Add Cast
 - [] Add New Resources

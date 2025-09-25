@@ -23,10 +23,10 @@ movieControler.get('/:movieId/details', async (req, res) => {
     res.render('details', { movie, rating, pageTitle: movie.title });
 });
 // Search Page
-movieControler.get('/search', (req, res) => {
+movieControler.get('/search', async (req, res) => {
     const filter = req.query; // req.query - Returns an object with the data from the search fields
 
-    const movies = movieServices.getAll(filter);
+    const movies = await movieServices.getAll(filter);
 
     res.render('search', { movies, filter, pageTitle: 'Search Movie' });
 });
