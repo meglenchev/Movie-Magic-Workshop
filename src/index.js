@@ -23,6 +23,10 @@ try {
 // Setup Handlebars
 app.engine('hbs', handlebars.engine({
     extname: 'hbs', // We specify what the template extension should be.
+    runtimeOptions: { // General Fix For Own Property Problem
+        allowProtoMethodsByDefault: true,
+        allowProtoPropertiesByDefault: true
+    }
 }));
 app.set('view engine', 'hbs');
 app.set('views', 'src/views'); // We indicate where the folder with the templates is located

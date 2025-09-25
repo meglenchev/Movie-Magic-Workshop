@@ -58,8 +58,8 @@ SoftUni JS Back End Course And Projects
 - [x] Add Movie Model 
     - [x] Create Movie Schema
     - [x] Create Movie Model 
-- [] Import File Movie To DB
-- [] General Fix For Own Property Problem
+- [x] Import File Movie To DB
+- [x] General Fix For Own Property Problem
 - [] Refactor Details
 - [] Refactor Create
 - [] Refactor Search
