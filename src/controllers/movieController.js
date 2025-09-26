@@ -31,12 +31,21 @@ movieControler.get('/search', async (req, res) => {
 
     res.render('search', { movies, filter, pageTitle: 'Search Movie' });
 });
-// Attach Cast To Movie
+// View Attach Cast Page 
 movieControler.get('/:movieId/attach', async (req, res) => {
     const movieId = req.params.movieId;
+
     const movie = await movieServices.getOne(movieId);
+    const casts = await castServices.getAll();
 
-    const cast = await castServices.getAll();
+    res.render('casts/attach', { movie, casts });
+});
+// Attach Cast To Movie
+movieControler.post('/:movieId/attach', async (req, res) => {
+    const movieId = req.params.movieId;
+    const castId = req.body.cast;
 
-    res.render('casts/attach', { movie, cast });
+    await movieServices.attach(movieId, castId);
+
+    res.redirect(`/movies/${movieId}/details`);
 });
