@@ -23,7 +23,7 @@ export default {
     // Return One Move - Details
     getOne(movieId) {
         //return Movie.findOne({_id: movieId}); // MongoDB Method
-        return Movie.findById(movieId); // Use Mongoose findBId Method
+        return Movie.findById(movieId).populate('casts'); // Use Mongoose findBId Method
     },
     // Create Movie
     create(movieData) {

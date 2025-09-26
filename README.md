@@ -79,3 +79,6 @@ SoftUni JS Back End Course And Projects
 - [x] Show Cast List In Attach Select
 - [x] Add Relation Betwen Cast And Movie
 - [x] Attach Cast Functionallity
+
+### Show Cast Details (population)
+- [x] Show Cast On Ditails Page (using population)
