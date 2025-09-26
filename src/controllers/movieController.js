@@ -30,3 +30,10 @@ movieControler.get('/search', async (req, res) => {
 
     res.render('search', { movies, filter, pageTitle: 'Search Movie' });
 });
+// Attach Cast To Movie
+movieControler.get('/:movieId/attach', async (req, res) => {
+    const movieId = req.params.movieId;
+    const movie = await movieServices.getOne(movieId);
+
+    res.render('casts/attach', { movie });
+});
