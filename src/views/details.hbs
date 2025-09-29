@@ -28,13 +28,12 @@
             <img src="{{movie.imageUrl}}" alt="{{movie.title}}">
         </div>
     </div>
-
-    {{#each movie.casts}}
+    <div class="main-cast-card">
+        {{#each movie.casts}}
         <div class="main-cast-card">
             <div class="cast-card">
                 <div class="card-img">
-                    <img src="{{imageUrl}}"
-                        alt="cast">
+                    <img src="{{imageUrl}}" alt="cast">
                 </div>
                 <div class="cast-info">
                     <h1>{{name}}</h1>
@@ -44,5 +43,6 @@
                 </div>
             </div>
         </div>
-    {{/each}}
+        {{/each}}
+    </div>
 </section>

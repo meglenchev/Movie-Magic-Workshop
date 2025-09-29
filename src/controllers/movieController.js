@@ -17,7 +17,9 @@ movieControler.post('/create', async (req, res) => {
 // Details Page
 movieControler.get('/:movieId/details', async (req, res) => {
     const movieId = req.params.movieId; // req.params.movieId Returns the parameter from the URL address
-    const movie = await movieServices.getOne(movieId);
+    //const movie = await movieServices.getOne(movieId);
+    //const movieCast = await castServices.getAll({includes: movie.casts});
+    const movie = await movieServices.getOne(movieId).populate('casts');
 
     const rating = '&#x2605;'.repeat(Number(movie.rating));
 
@@ -36,7 +38,7 @@ movieControler.get('/:movieId/attach', async (req, res) => {
     const movieId = req.params.movieId;
 
     const movie = await movieServices.getOne(movieId);
-    const casts = await castServices.getAll();
+    const casts = await castServices.getAll({excludes: movie.casts});
 
     res.render('casts/attach', { movie, casts });
 });

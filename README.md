@@ -82,3 +82,4 @@ SoftUni JS Back End Course And Projects
 
 ### Show Cast Details (population)
 - [x] Show Cast On Ditails Page (using population)
+- [x] Filter Casts If They Are Already attached 
