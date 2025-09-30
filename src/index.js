@@ -41,4 +41,4 @@ app.use(express.urlencoded());
 app.use(routes); // Calling The Global Routs controller
 
 // Start Server
-app.listen(5000, () => console.log('Server is listening on http://localehost:5000...'))
+app.listen(5000, () => console.log('Server is listening on http://localhost:5000...'))
