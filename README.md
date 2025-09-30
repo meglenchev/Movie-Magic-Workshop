@@ -87,5 +87,7 @@ SoftUni JS Back End Course And Projects
 ### Implementing Registration/Login Functionality
 - [x] Add New Resources
 - [x] Add Navigation Button For Login/Register
-- [] Create Cast Page
-- [] Create Cast Page
+- [x] Create Register Controller
+- [x] Create Register Page
+- [] Create Login Controller
+- [] Create Login Page
