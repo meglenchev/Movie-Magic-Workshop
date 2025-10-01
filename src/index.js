@@ -3,8 +3,6 @@ import handlebars from 'express-handlebars'; // npm install express-handlebars
 import mongoose from 'mongoose';
 
 import cookieParser from 'cookie-parser';
-import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
 
 import { routes } from './routes.js'; // Global Routs controller, you are responsible for all routes
 

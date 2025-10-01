@@ -102,5 +102,5 @@ SoftUni JS Back End Course And Projects
 - [x] Setup Cookie Parser
 - [x] Setup Jsonwebtoken
 - [x] Register User Service
-- [] Add Register User Functionality
+- [x] Add Register User Functionality
 - [] Login User Service
