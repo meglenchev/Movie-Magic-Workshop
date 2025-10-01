@@ -2,6 +2,10 @@ import express from 'express'; // npm install express
 import handlebars from 'express-handlebars'; // npm install express-handlebars
 import mongoose from 'mongoose';
 
+import cookieParser from 'cookie-parser';
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+
 import { routes } from './routes.js'; // Global Routs controller, you are responsible for all routes
 
 // Setup Express Server
@@ -36,6 +40,10 @@ app.use(express.static('src/public')); // Specify the location of static files f
 
 // Middleware that will Parse Form Data from request
 app.use(express.urlencoded());
+
+// Middleware Cookie Parser, Bcrypt
+app.use(cookieParser());
+app.use(bcrypt());
 
 // Routs
 app.use(routes); // Calling The Global Routs controller

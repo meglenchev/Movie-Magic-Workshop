@@ -84,12 +84,23 @@ SoftUni JS Back End Course And Projects
 - [x] Show Cast On Ditails Page (using population)
 - [x] Filter Casts If They Are Already attached 
 
-### Implementing Registration/Login Functionality
+### Add Registration/Login Pages
 - [x] Add New Resources
 - [x] Add Navigation Button For Login/Register
 - [x] Create User Controller
 - [x] Create Register Page
 - [x] Create Login Page
+
+### Implementing Registration/Login Functionality
 - [x] Add User Model
-- [] Register User Service
+    - [x] Create User Schema
+    - [x] Create User Model 
+- [x] Add Bcrypt
+- [x] Add Cookie Parser
+- [x] Add Jsonwebtoken
+- [x] Setup Bcrypt
+- [x] Setup Cookie Parser
+- [x] Setup Jsonwebtoken
+- [x] Register User Service
+- [] Add Register User Functionality
 - [] Login User Service
