@@ -41,9 +41,8 @@ app.use(express.static('src/public')); // Specify the location of static files f
 // Middleware that will Parse Form Data from request
 app.use(express.urlencoded());
 
-// Middleware Cookie Parser, Bcrypt
+// Middleware Cookie Parser
 app.use(cookieParser());
-app.use(bcrypt());
 
 // Routs
 app.use(routes); // Calling The Global Routs controller
