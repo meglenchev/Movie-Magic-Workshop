@@ -90,3 +90,6 @@ SoftUni JS Back End Course And Projects
 - [x] Create User Controller
 - [x] Create Register Page
 - [x] Create Login Page
+- [x] Add User Model
+- [] Register User Service
+- [] Login User Service
