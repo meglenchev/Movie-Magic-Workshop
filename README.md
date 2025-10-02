@@ -117,6 +117,10 @@ SoftUni JS Back End Course And Projects
 - [x] Validate User Authentication
 - [x] Add Route Guard
 - [x] Add isGuest Route
+
 ### Dynamic Navigation
+- [x] Groupe Navigation By User Type
+- [x] Add Auth Info To Handlebars Context
+
 ### Delete Movies
 ### Edit Movies
