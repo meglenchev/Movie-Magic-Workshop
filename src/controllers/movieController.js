@@ -41,9 +41,15 @@ movieControler.get('/search', async (req, res) => {
 // Attach Cast To Movie
 movieControler.get('/:movieId/delete', isAuth, async (req, res) => {
     const movieId = req.params.movieId;
+    
+    const movie = movieServices.getOne(movieId);
+    
+    if (!movie.creator?.equals(req.user.id)) {
+        return res.redirect('/');
+    }
 
     await movieServices.delete(movieId);
-    
+
     res.redirect('/');
 });
 // View Attach Cast Page 
