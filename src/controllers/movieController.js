@@ -38,11 +38,11 @@ movieControler.get('/search', async (req, res) => {
 
     res.render('search', { movies, filter, pageTitle: 'Search Movie' });
 });
-// Attach Cast To Movie
+// Delete Movie
 movieControler.get('/:movieId/delete', isAuth, async (req, res) => {
     const movieId = req.params.movieId;
     
-    const movie = movieServices.getOne(movieId);
+    const movie = await movieServices.getOne(movieId);
     
     if (!movie.creator?.equals(req.user.id)) {
         return res.redirect('/');
@@ -51,6 +51,13 @@ movieControler.get('/:movieId/delete', isAuth, async (req, res) => {
     await movieServices.delete(movieId);
 
     res.redirect('/');
+});
+// Edit Movie
+movieControler.get('/:movieId/edit', isAuth, async (req, res) => {
+    const movieId = req.params.movieId;
+    const movie = await movieServices.getOne(movieId);
+
+    res.render('movies/edit', { movie });
 });
 // View Attach Cast Page 
 movieControler.get('/:movieId/attach', isAuth, async (req, res) => {
