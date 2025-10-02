@@ -6,7 +6,7 @@ import { isAuth } from "../middleware/authMiddleware.js";
 export const movieControler = Router();
 // Create Page
 movieControler.get('/create', isAuth, (req, res) => {
-    res.render('create', {pageTitle: 'Create Movie'});
+    res.render('movies/create', {pageTitle: 'Create Movie'});
 });
 
 movieControler.post('/create', isAuth, async (req, res) => {
@@ -24,7 +24,7 @@ movieControler.get('/:movieId/details', async (req, res) => {
 
     const rating = '&#x2605;'.repeat(Number(movie.rating));
 
-    res.render('details', { movie, rating, pageTitle: movie.title });
+    res.render('movies/details', { movie, rating, pageTitle: movie.title });
 });
 // Search Page
 movieControler.get('/search', async (req, res) => {

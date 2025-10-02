@@ -122,5 +122,8 @@ SoftUni JS Back End Course And Projects
 - [x] Groupe Navigation By User Type
 - [x] Add Auth Info To Handlebars Context
 
+### Show Dynamic Buttons On Details Page
+
 ### Delete Movies
+
 ### Edit Movies
