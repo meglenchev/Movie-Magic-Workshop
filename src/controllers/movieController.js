@@ -11,7 +11,8 @@ movieControler.get('/create', isAuth, (req, res) => {
 
 movieControler.post('/create', isAuth, async (req, res) => {
     const movieData = req.body; // req.body - Returns a parsed object with the form data
-    await movieServices.create(movieData);
+    const creatorId = req.user.id; // We get the ID from the middleware "isAuth"
+    await movieServices.create(movieData, creatorId);
     
     res.redirect('/');
 });

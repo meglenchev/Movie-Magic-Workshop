@@ -12,7 +12,11 @@ const movieSchema = new Schema({
     casts: [{
         type: Types.ObjectId, // Set data type
         ref: 'Cast' // Cast Database Reference
-    }]
+    }],
+    creator: { // Single Relation Property
+        type: Types.ObjectId,
+        ref: 'User'
+    }
 });
 
 export const Movie = model('Movie', movieSchema, 'movies');

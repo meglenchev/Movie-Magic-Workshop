@@ -27,11 +27,14 @@ export default {
         return Movie.findById(movieId); // Use Mongoose findBId Method
     },
     // Create Movie
-    create(movieData) {
+    create(movieData, creatorId) {
         // const movie = new Movie(movieData);
         
         // return movie.save();
-        return Movie.create(movieData); // Use Mongoose Create Method
+        return Movie.create({
+            ...movieData, 
+            creator: creatorId,
+        }); // Use Mongoose Create Method
     }, 
     // Attach Cast To Movie
     async attach(movieId, castId) {

@@ -123,7 +123,10 @@ SoftUni JS Back End Course And Projects
 - [x] Add Auth Info To Handlebars Context
 
 ### Show Dynamic Buttons On Details Page
-
+- [x] Add Edit And Delete Button On Details Page
+- [x] Add Creator As Relation To Movies
+- [x] Add User As Creator On Movie Creator
+- [] Show Button Only For Creator
 ### Delete Movies
 
 ### Edit Movies
