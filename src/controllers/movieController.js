@@ -1,14 +1,15 @@
 import { Router } from "express";
 import movieServices from "../services/movieServices.js";
 import castServices from "../services/castServices.js";
+import { isAuth } from "../middleware/authMiddleware.js";
 
 export const movieControler = Router();
 // Create Page
-movieControler.get('/create', (req, res) => {
+movieControler.get('/create', isAuth, (req, res) => {
     res.render('create', {pageTitle: 'Create Movie'});
 });
 
-movieControler.post('/create', async (req, res) => {
+movieControler.post('/create', isAuth, async (req, res) => {
     const movieData = req.body; // req.body - Returns a parsed object with the form data
     await movieServices.create(movieData);
     
@@ -34,7 +35,7 @@ movieControler.get('/search', async (req, res) => {
     res.render('search', { movies, filter, pageTitle: 'Search Movie' });
 });
 // View Attach Cast Page 
-movieControler.get('/:movieId/attach', async (req, res) => {
+movieControler.get('/:movieId/attach', isAuth, async (req, res) => {
     const movieId = req.params.movieId;
 
     const movie = await movieServices.getOne(movieId);
@@ -43,7 +44,7 @@ movieControler.get('/:movieId/attach', async (req, res) => {
     res.render('casts/attach', { movie, casts });
 });
 // Attach Cast To Movie
-movieControler.post('/:movieId/attach', async (req, res) => {
+movieControler.post('/:movieId/attach', isAuth, async (req, res) => {
     const movieId = req.params.movieId;
     const castId = req.body.cast;
 
