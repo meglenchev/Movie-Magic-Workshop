@@ -126,7 +126,9 @@ SoftUni JS Back End Course And Projects
 - [x] Add Edit And Delete Button On Details Page
 - [x] Add Creator As Relation To Movies
 - [x] Add User As Creator On Movie Creator
-- [] Show Button Only For Creator
+- [x] Show Button Only For Creator
+
 ### Delete Movies
+- [x] Add Delete Action
 
 ### Edit Movies

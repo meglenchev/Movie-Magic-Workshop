@@ -36,6 +36,10 @@ export default {
             creator: creatorId,
         }); // Use Mongoose Create Method
     }, 
+    // Delete Movie
+    delete(movieId) {
+        return Movie.findByIdAndDelete(movieId);
+    },
     // Attach Cast To Movie
     async attach(movieId, castId) {
         // Add relation method 1

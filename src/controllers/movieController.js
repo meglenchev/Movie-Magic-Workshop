@@ -38,6 +38,14 @@ movieControler.get('/search', async (req, res) => {
 
     res.render('search', { movies, filter, pageTitle: 'Search Movie' });
 });
+// Attach Cast To Movie
+movieControler.get('/:movieId/delete', isAuth, async (req, res) => {
+    const movieId = req.params.movieId;
+
+    await movieServices.delete(movieId);
+    
+    res.redirect('/');
+});
 // View Attach Cast Page 
 movieControler.get('/:movieId/attach', isAuth, async (req, res) => {
     const movieId = req.params.movieId;
