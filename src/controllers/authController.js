@@ -32,6 +32,15 @@ authControler.post('/login', async (req, res) => {
     
     // Atach Token To Cookie
     res.cookie('auth', token);
-    
+
+    res.redirect('/');
+});
+
+// Logout
+authControler.get('/logout', (req, res) => {
+    // Clear Auth Cookie
+    res.clearCookie('auth');
+
+    // TODO: Invalidate JWT Token
     res.redirect('/');
 });
