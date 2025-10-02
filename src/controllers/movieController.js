@@ -25,7 +25,10 @@ movieControler.get('/:movieId/details', async (req, res) => {
 
     const rating = '&#x2605;'.repeat(Number(movie.rating));
 
-    res.render('movies/details', { movie, rating, pageTitle: movie.title });
+    // const isCreator = req.user?.id && movie.creator == req.user.id; // comparing ( different types ) objectID and creator Id
+    const isCreator = movie.creator && movie.creator.equals(req.user?.id); //Built-in method (equals) for comparing ( different types ) objectID
+
+    res.render('movies/details', { movie, rating, isCreator, pageTitle: movie.title });
 });
 // Search Page
 movieControler.get('/search', async (req, res) => {
