@@ -1,5 +1,5 @@
 import { Router } from "express";
-import userServices from "../services/userServices.js";
+import authServices from "../services/authServices.js";
 import { isAuth, isGuest } from "../middleware/authMiddleware.js";
 
 export const authControler = Router();
@@ -16,9 +16,10 @@ authControler.post('/register', isGuest, async (req, res) => {
         return res.redirect('/auth/register');
     }
 
-    await userServices.register(userData);
-
-    res.redirect('/auth/login');
+    const token = await authServices.register(userData);
+    res.cookie('auth', token);
+    
+    res.redirect('/');
 });
 
 // Login Controler
@@ -29,7 +30,7 @@ authControler.get('/login', isGuest, (req, res) => {
 authControler.post('/login', isGuest, async (req, res) => {
     const { email, password } = req.body;
 
-    const token = await userServices.login(email, password);
+    const token = await authServices.login(email, password);
     
     // Atach Token To Cookie
     res.cookie('auth', token);

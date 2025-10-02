@@ -138,3 +138,6 @@ SoftUni JS Back End Course And Projects
 - [x] Edit Movie
 - [x] Edit Movie Category
 - [x] Add Creator Validation For Edit Movie
+
+### Bonuses
+- [x] Automatic Login on Registration
