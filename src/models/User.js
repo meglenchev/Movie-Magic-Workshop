@@ -3,8 +3,14 @@ import bcrypt from 'bcrypt';
 
 
 const userSchema = new Schema({
-    email: String,
-    password: String
+    email: {
+        type: String, 
+        required: true,
+    },
+    password: {
+        type: String, 
+        required: true,
+    }
 });
 
 userSchema.pre('save', async function() {
