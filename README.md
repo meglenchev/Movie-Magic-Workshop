@@ -113,6 +113,8 @@ SoftUni JS Back End Course And Projects
 - [x] Logout functionality
 
 ### Authorization
+- [x] Add Auth Middleware
+- [x] Validate User Authentication
 ### Dynamic Navigation
 ### Delete Movies
 ### Edit Movies

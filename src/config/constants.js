@@ -1,0 +1,1 @@
+export const JWT_SECRET = 'f4ca9c40b0b168fbd69acc9106065df113b9291621f1282a0f11164a118c5dee'; // This constant should go in an environment file

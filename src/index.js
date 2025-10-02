@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
 
 import { routes } from './routes.js'; // Global Routs controller, you are responsible for all routes
+import { authMiddleware } from './middleware/authMiddleware.js';
 
 // Setup Express Server
 const app = express();
@@ -41,6 +42,9 @@ app.use(express.urlencoded());
 
 // Middleware Cookie Parser
 app.use(cookieParser());
+
+// Middleware Authorization
+app.use(authMiddleware);
 
 // Routs
 app.use(routes); // Calling The Global Routs controller
