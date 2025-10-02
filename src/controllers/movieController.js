@@ -56,8 +56,10 @@ movieControler.get('/:movieId/delete', isAuth, async (req, res) => {
 movieControler.get('/:movieId/edit', isAuth, async (req, res) => {
     const movieId = req.params.movieId;
     const movie = await movieServices.getOne(movieId);
+    
+    const categoriesViewData = getMovieCategoryViewData(movie.category);
 
-    res.render('movies/edit', { movie });
+    res.render('movies/edit', { movie, cagetories: categoriesViewData });
 });
 movieControler.post('/:movieId/edit', isAuth, async (req, res) => {
     const movieId = req.params.movieId;
@@ -67,6 +69,19 @@ movieControler.post('/:movieId/edit', isAuth, async (req, res) => {
 
     res.redirect(`/movies/${movieId}/details`);
 });
+function getMovieCategoryViewData(selectedCategory) {
+    const categories = [
+        { value: 'tv-show', label: 'TV Show'},
+        { value: 'animation', label: 'Animation'},
+        { value: 'movie', label: 'Movie'},
+        { value: 'documentary', label: 'Documentary'},
+        { value: 'short-film', label: 'Short Film'},
+    ];
+
+    const viewData = categories.map(categorie => ({...categorie, selected: selectedCategory === categorie.value ? 'selected' : ''}));
+
+    return viewData;
+}
 // View Attach Cast Page 
 movieControler.get('/:movieId/attach', isAuth, async (req, res) => {
     const movieId = req.params.movieId;

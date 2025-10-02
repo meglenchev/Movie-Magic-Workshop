@@ -136,3 +136,4 @@ SoftUni JS Back End Course And Projects
 - [x] Add Edit Page
 - [x] Add Dynamic Movie Data To Edit Page
 - [x] Edit Movie
+- [] Edit Movie Category
