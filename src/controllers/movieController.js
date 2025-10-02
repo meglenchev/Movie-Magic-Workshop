@@ -59,6 +59,14 @@ movieControler.get('/:movieId/edit', isAuth, async (req, res) => {
 
     res.render('movies/edit', { movie });
 });
+movieControler.post('/:movieId/edit', isAuth, async (req, res) => {
+    const movieId = req.params.movieId;
+    const movieData = req.body;
+
+    await movieServices.edit(movieId, movieData);
+
+    res.redirect(`/movies/${movieId}/details`);
+});
 // View Attach Cast Page 
 movieControler.get('/:movieId/attach', isAuth, async (req, res) => {
     const movieId = req.params.movieId;

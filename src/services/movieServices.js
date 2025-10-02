@@ -40,6 +40,10 @@ export default {
     delete(movieId) {
         return Movie.findByIdAndDelete(movieId);
     },
+    //Edit Movie
+    edit(movieId, movieData) {
+        return Movie.findByIdAndUpdate(movieId, movieData);
+    },
     // Attach Cast To Movie
     async attach(movieId, castId) {
         // Add relation method 1
