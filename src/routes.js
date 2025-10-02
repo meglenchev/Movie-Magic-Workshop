@@ -10,7 +10,7 @@ export const routes = Router();
 routes.use(homeController);
 routes.use('/movies', movieControler);
 routes.use('/casts', castController);
-routes.use('/user', authControler);
+routes.use('/auth', authControler);
 
 routes.get('/*splat', (req, res) => {
     res.render('404', {pageTitle: '404 Page not found'});

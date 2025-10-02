@@ -103,4 +103,8 @@ SoftUni JS Back End Course And Projects
 - [x] Setup Jsonwebtoken
 - [x] Register User Service
 - [x] Add Register User Functionality
-- [] Login User Service
+- [x] Login User Service
+    - [x] Validate User
+    - [x] Validate Password
+    - [x] Create Token
+- [] Return Token To Client

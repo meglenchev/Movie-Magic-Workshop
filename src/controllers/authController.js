@@ -12,12 +12,12 @@ authControler.post('/register', async (req, res) => {
     const userData = req.body;
 
     if (!userData.password || !userData.rePassword || userData.password !== userData.rePassword) {
-        return res.redirect('/user/register');
+        return res.redirect('/auth/register');
     }
 
     await userServices.register(userData);
 
-    res.redirect('/user/login');
+    res.redirect('/auth/login');
 });
 
 // Login Controler
@@ -26,13 +26,9 @@ authControler.get('/login', (req, res) => {
 });
 
 authControler.post('/login', async (req, res) => {
-    const userData = req.body;
+    const { email, password } = req.body;
 
-    if (!userData.email || !userData.password) {
-       return res.render('user/login');
-    }
-
-    const user = await userServices.getLoginUser(userData);
+    const token = await userServices.login(email, password);
 
     res.redirect('/');
 });
