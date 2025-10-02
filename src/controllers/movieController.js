@@ -57,6 +57,10 @@ movieControler.get('/:movieId/edit', isAuth, async (req, res) => {
     const movieId = req.params.movieId;
     const movie = await movieServices.getOne(movieId);
     
+    if (!movie.creator?.equals(req.user.id)) {
+        return res.redirect('/');
+    }
+    
     const categoriesViewData = getMovieCategoryViewData(movie.category);
 
     res.render('movies/edit', { movie, cagetories: categoriesViewData });
