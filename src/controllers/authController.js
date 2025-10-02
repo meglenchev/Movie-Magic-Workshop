@@ -1,14 +1,15 @@
 import { Router } from "express";
 import userServices from "../services/userServices.js";
+import { isAuth, isGuest } from "../middleware/authMiddleware.js";
 
 export const authControler = Router();
 
 // Registration Controler
-authControler.get('/register', (req, res) => {
+authControler.get('/register', isGuest, (req, res) => {
     res.render('user/register', {pageTitle: 'Registration'});
 });
 
-authControler.post('/register', async (req, res) => {
+authControler.post('/register', isGuest, async (req, res) => {
     const userData = req.body;
 
     if (!userData.password || !userData.rePassword || userData.password !== userData.rePassword) {
@@ -21,11 +22,11 @@ authControler.post('/register', async (req, res) => {
 });
 
 // Login Controler
-authControler.get('/login', (req, res) => {
+authControler.get('/login', isGuest, (req, res) => {
     res.render('user/login', {pageTitle: 'Login'});
 });
 
-authControler.post('/login', async (req, res) => {
+authControler.post('/login', isGuest, async (req, res) => {
     const { email, password } = req.body;
 
     const token = await userServices.login(email, password);
@@ -37,7 +38,7 @@ authControler.post('/login', async (req, res) => {
 });
 
 // Logout
-authControler.get('/logout', (req, res) => {
+authControler.get('/logout', isAuth, (req, res) => {
     // Clear Auth Cookie
     res.clearCookie('auth');
 

@@ -116,6 +116,7 @@ SoftUni JS Back End Course And Projects
 - [x] Add Auth Middleware
 - [x] Validate User Authentication
 - [x] Add Route Guard
+- [x] Add isGuest Route
 ### Dynamic Navigation
 ### Delete Movies
 ### Edit Movies
